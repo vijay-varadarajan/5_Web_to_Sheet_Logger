@@ -1,44 +1,30 @@
 # Web to Sheet Logger Chrome Extension
 
-A Chrome extension that allows users to highlight text on any webpage and save it to a Google Sheet along with metadata (timestamp and page URL).
+A Chrome extension that allows users to highlight text on any webpage and save it to a Google Sheet along with metadata (timestamp, page URL, and tags).
 
 ## Features
 
 - Highlight text on any webpage
 - Save highlighted text with metadata to Google Sheets
+- Add tags to organize your highlights
+- Bulk save multiple highlights at once
 - Simple and intuitive user interface
-- Configurable Google Apps Script URL
 
-## Setup Instructions
+## Installation
 
-1. **Create a Google Apps Script**
+1. **Clone or download this repository**
 
-   Create a new Google Apps Script project with the following code:
-
-   ```javascript
-   function doPost(e) {
-     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-     var data = JSON.parse(e.postData.contents);
-     
-     sheet.appendRow([
-       data.timestamp,
-       data.text,
-       data.url,
-       data.title
-     ]);
-     
-     return ContentService.createTextOutput(JSON.stringify({ 'result': 'success' }))
-       .setMimeType(ContentService.MimeType.JSON);
-   }
-   ```
-
-2. **Deploy the Google Apps Script**
-   - Click on "Deploy" > "New deployment"
-   - Choose "Web app"
-   - Set "Execute as" to your account
-   - Set "Who has access" to "Anyone"
-   - Click "Deploy"
-   - Copy the Web App URL
+2. **Set up Google Apps Script**
+   - Go to [Google Apps Script](https://script.google.com)
+   - Create a new project
+   - Copy and paste the code from `google-apps-script.js` in this repository
+   - Deploy as a web app:
+     - Click "Deploy" > "New deployment"
+     - Choose "Web app"
+     - Set "Execute as" to your account
+     - Set "Who has access" to "Anyone"
+     - Click "Deploy"
+     - Copy the Web App URL
 
 3. **Install the Chrome Extension**
    - Open Chrome and go to `chrome://extensions/`
@@ -48,9 +34,20 @@ A Chrome extension that allows users to highlight text on any webpage and save i
 
 ## Usage
 
-1. Select any text on a webpage
-2. Click the "Save to Sheet" button that appears
-3. The text and metadata will be saved to your Google Sheet
+1. **Select Text**
+   - Highlight any text on a webpage
+   - A "Save to Sheet" button will appear below the selection
+
+2. **Save Highlights**
+   - Click "Save to Sheet" to add the highlight to your collection
+   - A counter in the bottom right shows how many highlights you've collected
+
+3. **Add Tags and Save**
+   - Click "Save All Highlights" when ready
+   - In the review dialog:
+     - Add tags to organize your highlights
+     - Review all highlights
+     - Click "Save All" to save everything to your Google Sheet
 
 ## Data Format
 
@@ -59,6 +56,19 @@ The extension saves the following data to your Google Sheet:
 - Selected text
 - Page URL
 - Page title
+- Tags (comma-separated)
+
+## Configuration
+
+Google Apps Script URL:
+```
+https://script.google.com/macros/s/AKfycbxTejx7HtJ2wdqCs7FeigoJDIVLqw3clMQv7Gyshzxg2cpT1_qvA3d6cdW2ZnIIoH8WSQ/exec
+```
+
+Google Sheet URL:
+```
+https://docs.google.com/spreadsheets/d/167vSew0552M1YbQ1pJoYertV4nkc5uP6aJx4yf50KHE/edit?usp=sharing
+```
 
 ## Support
 
