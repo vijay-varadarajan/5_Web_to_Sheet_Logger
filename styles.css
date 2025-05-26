@@ -41,19 +41,88 @@ input[type="text"] {
   border-radius: 4px;
 }
 
+/* Save Container Styles */
+.web-to-sheet-save-container {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 10000;
+  display: none;
+  min-width: 200px;
+}
+
+/* Tag Input Styles */
+.web-to-sheet-tag-container {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.web-to-sheet-tag-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.web-to-sheet-add-tag {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+}
+
+.web-to-sheet-add-tag:hover {
+  background-color: #45a049;
+}
+
+/* Tag List Styles */
+.web-to-sheet-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.web-to-sheet-tag {
+  background-color: #e0e0e0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.web-to-sheet-tag-remove {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  color: #d80000;
+  margin-left: 2px;
+}
+
 /* Floating Save Button Styles */
 .web-to-sheet-save-button {
-  position: absolute;
   background-color: #4CAF50;
   color: white;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  z-index: 10000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   font-size: 14px;
-  display: none;
+  width: 100%;
 }
 
 .web-to-sheet-save-button:hover {
@@ -99,4 +168,125 @@ input[type="text"] {
 
 .web-to-sheet-bulk-button:hover {
   background-color: #45a049;
+}
+
+/* Dialog Styles */
+.web-to-sheet-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+}
+
+.web-to-sheet-dialog-content {
+  background-color: white;
+  color: #000;  
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.web-to-sheet-dialog h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.web-to-sheet-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.web-to-sheet-dialog-highlight {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.web-to-sheet-dialog-text {
+  color: #000000;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.web-to-sheet-dialog-tags {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.web-to-sheet-dialog-tag-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #000;
+}
+
+.web-to-sheet-dialog-add-tag {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+}
+
+.web-to-sheet-dialog-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.web-to-sheet-dialog-tag {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 2px 8px;
+  margin: 2px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  color: #000000;
+}
+
+.web-to-sheet-dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.web-to-sheet-cancel {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.web-to-sheet-confirm {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 } 
