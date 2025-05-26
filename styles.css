@@ -58,4 +58,45 @@ input[type="text"] {
 
 .web-to-sheet-save-button:hover {
   background-color: #45a049;
+}
+
+/* Bulk Save Button Styles */
+.web-to-sheet-bulk-save {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 10000;
+}
+
+.web-to-sheet-counter {
+  background-color: #4CAF50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 24px;
+  text-align: center;
+}
+
+.web-to-sheet-bulk-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.web-to-sheet-bulk-button:hover {
+  background-color: #45a049;
 } 
