@@ -4,8 +4,8 @@ A Chrome extension that allows users to highlight text on any webpage and save i
 
 ## Features
 
-- Highlight text on any webpage
-- Save highlighted text with metadata to Google Sheets
+- Highlight text(s) on any webpage
+- Save highlighted text(s) with metadata to Google Sheets
 - Add tags to organize your highlights
 - Bulk save multiple highlights at once
 - Simple and intuitive user interface
@@ -35,7 +35,7 @@ A Chrome extension that allows users to highlight text on any webpage and save i
 ## Usage
 
 1. **Select Text**
-   - Highlight any text on a webpage
+   - Highlight any text - single or multiple - on a webpage
    - A "Save to Sheet" button will appear below the selection
 
 2. **Save Highlights**
