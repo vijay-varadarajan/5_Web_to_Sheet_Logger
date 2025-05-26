@@ -4,7 +4,7 @@ let saveButton = null;
 function createSaveButton() {
   if (!saveButton) {
     saveButton = document.createElement('button');
-    saveButton.className = 'save-button';
+    saveButton.className = 'web-to-sheet-save-button';
     saveButton.textContent = 'Save to Sheet';
     document.body.appendChild(saveButton);
   }
@@ -34,7 +34,7 @@ document.addEventListener('mouseup', function(e) {
 
 // Handle save button click
 document.addEventListener('click', function(e) {
-  if (e.target.className === 'save-button') {
+  if (e.target.className === 'web-to-sheet-save-button') {
     const selection = window.getSelection();
     const selectedText = selection.toString().trim();
     

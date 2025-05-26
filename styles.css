@@ -21,7 +21,8 @@ input[type="text"] {
   border-radius: 4px;
 }
 
-button {
+/* Make button styles specific to our extension */
+.web-to-sheet-button {
   background-color: #4CAF50;
   color: white;
   padding: 8px 16px;
@@ -30,7 +31,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.web-to-sheet-button:hover {
   background-color: #45a049;
 }
 
@@ -41,7 +42,7 @@ button:hover {
 }
 
 /* Floating Save Button Styles */
-.save-button {
+.web-to-sheet-save-button {
   position: absolute;
   background-color: #4CAF50;
   color: white;
@@ -55,6 +56,6 @@ button:hover {
   display: none;
 }
 
-.save-button:hover {
+.web-to-sheet-save-button:hover {
   background-color: #45a049;
 } 
