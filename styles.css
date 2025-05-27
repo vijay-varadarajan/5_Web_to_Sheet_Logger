@@ -1,20 +1,20 @@
 /* Popup Styles */
-.container {
+.wts-container {
   width: 300px;
   padding: 15px;
 }
 
-.form-group {
+.wts-form-group {
   margin-bottom: 15px;
 }
 
-label {
+.wts-label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-input[type="text"] {
+.wts-input {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -22,7 +22,7 @@ input[type="text"] {
 }
 
 /* Make button styles specific to our extension */
-.web-to-sheet-button {
+.wts-button {
   background-color: #4CAF50;
   color: white;
   padding: 8px 16px;
@@ -31,18 +31,18 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.web-to-sheet-button:hover {
+.wts-button:hover {
   background-color: #45a049;
 }
 
-#status {
+#wts-status {
   margin-top: 10px;
   padding: 8px;
   border-radius: 4px;
 }
 
 /* Save Container Styles */
-.web-to-sheet-save-container {
+.wts-save-container {
   position: absolute;
   background-color: white;
   padding: 10px;
@@ -54,13 +54,13 @@ input[type="text"] {
 }
 
 /* Tag Input Styles */
-.web-to-sheet-tag-container {
+.wts-tag-container {
   display: flex;
   gap: 5px;
   margin-top: 8px;
 }
 
-.web-to-sheet-tag-input {
+.wts-tag-input {
   flex: 1;
   padding: 4px 8px;
   border: 1px solid #ccc;
@@ -68,7 +68,7 @@ input[type="text"] {
   font-size: 12px;
 }
 
-.web-to-sheet-add-tag {
+.wts-add-tag {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -83,19 +83,19 @@ input[type="text"] {
   padding: 0;
 }
 
-.web-to-sheet-add-tag:hover {
+.wts-add-tag:hover {
   background-color: #45a049;
 }
 
 /* Tag List Styles */
-.web-to-sheet-tag-list {
+.wts-tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin-top: 8px;
 }
 
-.web-to-sheet-tag {
+.wts-tag {
   background-color: #e0e0e0;
   padding: 2px 8px;
   border-radius: 12px;
@@ -105,7 +105,7 @@ input[type="text"] {
   gap: 4px;
 }
 
-.web-to-sheet-tag-remove {
+.wts-tag-remove {
   cursor: pointer;
   font-size: 14px;
   line-height: 1;
@@ -114,7 +114,7 @@ input[type="text"] {
 }
 
 /* Floating Save Button Styles */
-.web-to-sheet-save-button {
+.wts-save-button {
   background-color: #4CAF50;
   color: white;
   padding: 8px 16px;
@@ -125,12 +125,12 @@ input[type="text"] {
   width: 100%;
 }
 
-.web-to-sheet-save-button:hover {
+.wts-save-button:hover {
   background-color: #45a049;
 }
 
 /* Bulk Save Button Styles */
-.web-to-sheet-bulk-save {
+.wts-bulk-save {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -144,7 +144,7 @@ input[type="text"] {
   z-index: 10000;
 }
 
-.web-to-sheet-counter {
+.wts-counter {
   background-color: #4CAF50;
   color: white;
   padding: 4px 8px;
@@ -155,7 +155,7 @@ input[type="text"] {
   text-align: center;
 }
 
-.web-to-sheet-bulk-button {
+.wts-bulk-button {
   background-color: #4CAF50;
   color: white;
   padding: 8px 16px;
@@ -166,12 +166,12 @@ input[type="text"] {
   white-space: nowrap;
 }
 
-.web-to-sheet-bulk-button:hover {
+.wts-bulk-button:hover {
   background-color: #45a049;
 }
 
 /* Dialog Styles */
-.web-to-sheet-dialog {
+.wts-dialog {
   position: fixed;
   top: 0;
   left: 0;
@@ -184,7 +184,7 @@ input[type="text"] {
   z-index: 10001;
 }
 
-.web-to-sheet-dialog-content {
+.wts-dialog-content {
   background-color: white;
   color: #000;  
   padding: 20px;
@@ -195,37 +195,37 @@ input[type="text"] {
   overflow-y: auto;
 }
 
-.web-to-sheet-dialog h3 {
+.wts-dialog h3 {
   margin-top: 0;
   margin-bottom: 16px;
 }
 
-.web-to-sheet-highlights-list {
+.wts-highlights-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.web-to-sheet-dialog-highlight {
+.wts-dialog-highlight {
   border: 1px solid #e0e0e0;
   padding: 12px;
   border-radius: 4px;
 }
 
-.web-to-sheet-dialog-text {
+.wts-dialog-text {
   color: #000000;
   margin-bottom: 8px;
   font-size: 14px;
   line-height: 1.4;
 }
 
-.web-to-sheet-dialog-tags {
+.wts-dialog-tags {
   display: flex;
   gap: 5px;
   margin-bottom: 8px;
 }
 
-.web-to-sheet-dialog-tag-input {
+.wts-dialog-tag-input {
   flex: 1;
   padding: 4px 8px;
   border: 1px solid #ccc;
@@ -234,7 +234,7 @@ input[type="text"] {
   color: #000;
 }
 
-.web-to-sheet-dialog-add-tag {
+.wts-dialog-add-tag {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -249,13 +249,13 @@ input[type="text"] {
   padding: 0;
 }
 
-.web-to-sheet-dialog-tag-list {
+.wts-dialog-tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
 
-.web-to-sheet-dialog-tag {
+.wts-dialog-tag {
   background-color: #f0f0f0;
   border-radius: 12px;
   padding: 2px 8px;
@@ -266,14 +266,14 @@ input[type="text"] {
   color: #000000;
 }
 
-.web-to-sheet-dialog-buttons {
+.wts-dialog-buttons {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
   margin-top: 16px;
 }
 
-.web-to-sheet-cancel {
+.wts-cancel {
   background-color: #f44336;
   color: white;
   padding: 8px 16px;
@@ -282,7 +282,7 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.web-to-sheet-confirm {
+.wts-confirm {
   background-color: #4CAF50;
   color: white;
   padding: 8px 16px;

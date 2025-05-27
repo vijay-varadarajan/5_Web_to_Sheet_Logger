@@ -13,14 +13,14 @@ function createButtons() {
   if (!saveButton) {
     debugLog('Creating save button container');
     saveButton = document.createElement('div');
-    saveButton.className = 'web-to-sheet-save-container';
+    saveButton.className = 'wts-save-container';
     saveButton.innerHTML = `
-      <button class="web-to-sheet-save-button">Save to Sheet</button>
+      <button class="wts-save-button">Save to Sheet</button>
     `;
     document.body.appendChild(saveButton);
 
     // Add event listener for save button
-    saveButton.querySelector('.web-to-sheet-save-button').addEventListener('click', function(e) {
+    saveButton.querySelector('.wts-save-button').addEventListener('click', function(e) {
       debugLog('Save button clicked');
       e.stopPropagation(); // Prevent event bubbling
       handleSaveButtonClick();
@@ -30,15 +30,15 @@ function createButtons() {
   if (!bulkSaveButton) {
     debugLog('Creating bulk save button');
     bulkSaveButton = document.createElement('div');
-    bulkSaveButton.className = 'web-to-sheet-bulk-save';
+    bulkSaveButton.className = 'wts-bulk-save';
     bulkSaveButton.innerHTML = `
-      <span class="web-to-sheet-counter">0</span>
-      <button class="web-to-sheet-bulk-button">Save All Highlights</button>
+      <span class="wts-counter">0</span>
+      <button class="wts-bulk-button">Save All Highlights</button>
     `;
     document.body.appendChild(bulkSaveButton);
 
     // Add click handler for bulk save
-    bulkSaveButton.querySelector('.web-to-sheet-bulk-button').addEventListener('click', function() {
+    bulkSaveButton.querySelector('.wts-bulk-button').addEventListener('click', function() {
       debugLog('Bulk save button clicked');
       showBulkSaveDialog();
     });
@@ -87,7 +87,7 @@ function handleSaveButtonClick() {
 // Update the counter
 function updateCounter() {
   debugLog('Updating counter', { count: selectedHighlights.length });
-  const counter = bulkSaveButton.querySelector('.web-to-sheet-counter');
+  const counter = bulkSaveButton.querySelector('.wts-counter');
   counter.textContent = selectedHighlights.length;
   
   // Show/hide bulk save button based on selection count
@@ -102,43 +102,43 @@ function updateCounter() {
 function showBulkSaveDialog() {
   debugLog('Showing bulk save dialog');
   const dialog = document.createElement('div');
-  dialog.className = 'web-to-sheet-dialog';
+  dialog.className = 'wts-dialog';
   dialog.innerHTML = `
-    <div class="web-to-sheet-dialog-content">
+    <div class="wts-dialog-content">
       <h3>Review Highlights</h3>
-      <div class="web-to-sheet-highlights-list"></div>
-      <div class="web-to-sheet-dialog-buttons">
-        <button class="web-to-sheet-cancel">Cancel</button>
-        <button class="web-to-sheet-confirm">Save All</button>
+      <div class="wts-highlights-list"></div>
+      <div class="wts-dialog-buttons">
+        <button class="wts-cancel">Cancel</button>
+        <button class="wts-confirm">Save All</button>
       </div>
     </div>
   `;
 
-  const highlightsList = dialog.querySelector('.web-to-sheet-highlights-list');
+  const highlightsList = dialog.querySelector('.wts-highlights-list');
   
   // Add each highlight with its tags
   selectedHighlights.forEach((highlight, index) => {
     debugLog('Adding highlight to dialog', { index, highlight });
     const highlightElement = document.createElement('div');
-    highlightElement.className = 'web-to-sheet-dialog-highlight';
+    highlightElement.className = 'wts-dialog-highlight';
     highlightElement.innerHTML = `
-      <div class="web-to-sheet-dialog-text">${highlight.text}</div>
-      <div class="web-to-sheet-dialog-tags">
-        <input type="text" class="web-to-sheet-dialog-tag-input" placeholder="Add tag...">
-        <button class="web-to-sheet-dialog-add-tag">+</button>
+      <div class="wts-dialog-text">${highlight.text}</div>
+      <div class="wts-dialog-tags">
+        <input type="text" class="wts-dialog-tag-input" placeholder="Add tag...">
+        <button class="wts-dialog-add-tag">+</button>
       </div>
-      <div class="web-to-sheet-dialog-tag-list"></div>
+      <div class="wts-dialog-tag-list"></div>
     `;
 
     // Add existing tags
     highlight.tags.forEach(tag => {
       debugLog('Adding existing tag to dialog', { tag });
-      addTagToElement(highlightElement.querySelector('.web-to-sheet-dialog-tag-list'), tag);
+      addTagToElement(highlightElement.querySelector('.wts-dialog-tag-list'), tag);
     });
 
     // Add tag input functionality
-    const tagInput = highlightElement.querySelector('.web-to-sheet-dialog-tag-input');
-    const addTagButton = highlightElement.querySelector('.web-to-sheet-dialog-add-tag');
+    const tagInput = highlightElement.querySelector('.wts-dialog-tag-input');
+    const addTagButton = highlightElement.querySelector('.wts-dialog-add-tag');
     
     tagInput.addEventListener('keypress', function(e) {
       debugLog('Dialog tag input keypress', { key: e.key });
@@ -156,17 +156,17 @@ function showBulkSaveDialog() {
   });
 
   // Add event listeners for dialog buttons
-  dialog.querySelector('.web-to-sheet-cancel').addEventListener('click', function() {
+  dialog.querySelector('.wts-cancel').addEventListener('click', function() {
     debugLog('Dialog cancel clicked');
     dialog.remove();
   });
 
-  dialog.querySelector('.web-to-sheet-confirm').addEventListener('click', function() {
+  dialog.querySelector('.wts-confirm').addEventListener('click', function() {
     debugLog('Dialog confirm clicked');
     // Update tags for each highlight
-    const highlightElements = dialog.querySelectorAll('.web-to-sheet-dialog-highlight');
+    const highlightElements = dialog.querySelectorAll('.wts-dialog-highlight');
     highlightElements.forEach((element, index) => {
-      const tags = Array.from(element.querySelectorAll('.web-to-sheet-dialog-tag'))
+      const tags = Array.from(element.querySelectorAll('.wts-dialog-tag'))
         .map(tag => tag.textContent.trim().slice(0, -1));
       debugLog('Updating highlight tags', { index, tags });
       selectedHighlights[index].tags = tags;
@@ -185,7 +185,7 @@ function addTagToHighlight(highlightElement, tagInput, highlight) {
   const tag = tagInput.value.trim();
   debugLog('Adding tag to highlight in dialog', { tag });
   if (tag) {
-    addTagToElement(highlightElement.querySelector('.web-to-sheet-dialog-tag-list'), tag);
+    addTagToElement(highlightElement.querySelector('.wts-dialog-tag-list'), tag);
     tagInput.value = '';
   }
 }
@@ -194,15 +194,15 @@ function addTagToHighlight(highlightElement, tagInput, highlight) {
 function addTagToElement(container, tag) {
   debugLog('Adding tag element', { container, tag });
   const tagElement = document.createElement('span');
-  tagElement.className = 'web-to-sheet-dialog-tag';
+  tagElement.className = 'wts-dialog-tag';
   tagElement.innerHTML = `
     ${tag}
-    <span class="web-to-sheet-tag-remove"> ×</span>
+    <span class="wts-tag-remove"> ×</span>
   `;
   container.appendChild(tagElement);
 
   // Add remove functionality
-  tagElement.querySelector('.web-to-sheet-tag-remove').addEventListener('click', function(e) {
+  tagElement.querySelector('.wts-tag-remove').addEventListener('click', function(e) {
     e.stopPropagation(); // Prevent event bubbling
     debugLog('Removing tag element', { tag });
     tagElement.remove();

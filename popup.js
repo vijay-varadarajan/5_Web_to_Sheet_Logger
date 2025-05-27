@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const scriptUrlInput = document.getElementById('scriptUrl');
   const saveButton = document.getElementById('saveConfig');
-  const statusDiv = document.getElementById('status');
+  const statusDiv = document.getElementById('wts-status');
 
   // Load saved URL
   chrome.storage.sync.get(['scriptUrl'], function(result) {
