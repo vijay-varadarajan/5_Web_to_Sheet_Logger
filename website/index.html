@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to Sheet Logger - Chrome Extension</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/icon.png" alt="Icon" style="width: 40px; height: 40px; margin-right: 10px;">Web to Sheet Logger
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#usage">Usage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#repository">Repository</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#developer">Developer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center position-relative overflow-hidden">
+        <!-- Subtle Animated Background Elements Placeholder -->
+        <div class="hero-bg-animated position-absolute top-0 start-0 w-100 h-100" style="pointer-events:none; z-index:0;">
+            <!-- Example: floating icons or SVGs -->
+            <img src="assets/images/Google_Chrome_icon_(February_2022).svg.webp" alt="Chrome Icon" class="floating-icon" style="position:absolute; left:5%; top:10%; width:60px; opacity:0.35;">
+            <img src="assets/images/Google_Sheets_logo_(2014-2020).svg.png" alt="Sheets Icon" class="floating-icon" style="position:absolute; right:8%; top:20%; width:70px; opacity:0.4;">
+            <img src="assets/images/icon.png" alt="Arrow" class="floating-icon" style="position:absolute; left:40%; bottom:10%; width:80px; opacity:0.30;">
+        </div>
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row min-vh-100 align-items-center flex-lg-row flex-column-reverse">
+                <!-- Left: Text and CTAs -->
+                <div class="col-lg-6 text-lg-start text-center">
+                    <h1 class="display-3 fw-bold mb-3">Web to Sheet Logger</h1>
+                    <!-- Tagline/Subheadline -->
+                    <p class="lead mb-4">Turn any web data into organized Google Sheets in one click.</p>
+                    <!-- CTA Buttons -->
+                    <div class="mb-4 d-flex flex-wrap justify-content-lg-start justify-content-center gap-3">
+                        <a href="#features" class="btn btn-light btn-lg">Learn More</a>
+                        <a href="https://github.com/vijay-varadarajan/5_Web_to_Sheet_Logger" class="btn btn-success btn-lg">Install Extension</a>
+                    </div>
+                    <!-- Trust Badges/User Stats -->
+                    <div class="mb-4 d-flex flex-wrap align-items-center gap-3 justify-content-lg-start justify-content-center">
+                        <span class="badge bg-light text-success border border-success fs-6"><i class="fab fa-google me-2"></i>Google Sheets Compatible</span>
+                    </div>
+                    <!-- How it Works Stepper -->
+                    <div class="how-it-works mb-4">
+                        <div class="d-flex flex-wrap gap-4 justify-content-lg-start justify-content-center align-items-center">
+                            <div class="step text-center">
+                                <div class="icon mb-2"><i class="fas fa-plug fa-2x text-info"></i></div>
+                                <div class="fw-semibold">Install Extension</div>
+                            </div>
+                            <div class="step text-center">
+                                <div class="icon mb-2"><i class="fas fa-mouse-pointer fa-2x text-primary"></i></div>
+                                <div class="fw-semibold">Select Data</div>
+                            </div>
+                            <div class="step text-center">
+                                <div class="icon mb-2"><i class="fas fa-file-excel fa-2x text-success"></i></div>
+                                <div class="fw-semibold">Log to Sheet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Extension Mockup & Animated Data Flow -->
+                <div class="col-lg-6 mb-5 mb-lg-0 d-flex flex-column align-items-center justify-content-center">
+                    <div class="extension-mockup position-relative mb-4">
+                        <!-- Chrome Extension Screenshot Placeholder -->
+                        <img src="assets/images/usage_image.png" alt="Extension Screenshot" class="img-fluid rounded shadow-lg" style="max-width:350px; min-height:200px; background:#e9ecef;">
+                        <!-- Animated Data Flow Illustration Placeholder -->
+                        <div class="data-flow-illustration position-absolute top-50 start-100 translate-middle-y ms-3 d-none d-lg-block">
+                            <img src="assets/images/popup.png" alt="Data Flow Arrow" style="width:240px; opacity:0.9;transform:translate(-100px, -100px); border-radius: 5px;">
+                            <img src="assets/images/demo.png" alt="Google Sheets" style="width:360px; margin-left:-20px; transform:translate(-120px, 40px); border-radius: 5px;">
+                        </div>
+                    </div>
+                    <div class="text-muted small">(Extension UI & data flow illustration placeholder)</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-magic fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title">Easy Integration</h3>
+                            <p class="card-text">Connect your web data to Google Sheets with just a few clicks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-sync fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title">Real-time Updates</h3>
+                            <p class="card-text">Automatically sync your data in real-time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title">Secure & Reliable</h3>
+                            <p class="card-text">Your data is always safe and protected</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section id="usage" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">How to Use</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="usage-steps">
+                        <div class="step mb-4">
+                            <h4><i class="fas fa-download me-2"></i>1. Install the Extension</h4>
+                            <p>Get Web to Sheet Logger from the Chrome Web Store and add it to your browser in seconds.</p>
+                        </div>
+                        <div class="step mb-4">
+                            <h4><i class="fas fa-sign-in-alt me-2"></i>2. Sign in with Google</h4>
+                            <p>Securely connect your Google account to enable seamless access to your Sheets.</p>
+                        </div>
+                        <div class="step mb-4">
+                            <h4><i class="fas fa-link me-2"></i>3. Link Your Spreadsheet</h4>
+                            <p>Choose or create a Google Sheet where your web data will be logged automatically.</p>
+                        </div>
+                        <div class="step mb-4">
+                            <h4><i class="fas fa-mouse-pointer me-2"></i>4. Select Data on Any Webpage</h4>
+                            <p>Highlight or pick the information you want to capture directly from the web page. </p>
+                        </div>
+                        <div class="step mb-4">
+                            <h4><i class="fas fa-play-circle me-2"></i>5. Add tags to your highlighted text</h4>
+                            <p>Before saving, add one or more tags to your highlighted text to help you organize your data later.</p>
+                        </div>
+                        <div class="step mb-4">
+                            <h4><i class="fas fa-chart-line me-2"></i>6. Review & Analyze</h4>
+                            <p>Open your Google Sheet anytime to view, filter, and analyze your collected data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/usage-placeholder.png" alt="Usage Demo" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repository Section -->
+    <section id="repository" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Repository</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fab fa-github fa-3x text-dark mb-3"></i>
+                            <h3 class="card-title">Open Source</h3>
+                            <p class="card-text">This project is open source and available on GitHub</p>
+                            <a href="https://github.com/vijay-varadarajan/5_Web_to_Sheet_Logger" class="btn btn-dark">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developer" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Developer</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="assets/images/Screenshot 2024-03-07 213849.png" alt="Developer" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                            <h3 class="card-title">Developer Name</h3>
+                            <p class="card-text">Full-stack developer passionate about creating useful tools and extensions</p>
+                            <div class="social-links">
+                                <a href="https://github.com/vijay-varadarajan" class="text-dark me-3"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/in/vijay-varadarajan/" class="text-dark me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="https://twitter.com/__vj84" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Web to Sheet Logger. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
