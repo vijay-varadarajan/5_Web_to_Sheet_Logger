@@ -62,7 +62,7 @@ The extension saves the following data to your Google Sheet:
 
 Google Apps Script URL:
 ```
-https://script.google.com/macros/s/AKfycbxTejx7HtJ2wdqCs7FeigoJDIVLqw3clMQv7Gyshzxg2cpT1_qvA3d6cdW2ZnIIoH8WSQ/exec
+https://script.google.com/home/projects/1z0bu0NIrQY3yfYUl8XJZBbJzAnYjvgVhKRUH6RLB8lE3EkJunjizSh2J/edit
 ```
 
 Google Sheet URL:
